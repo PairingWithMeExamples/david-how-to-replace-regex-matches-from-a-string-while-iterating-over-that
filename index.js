@@ -10,12 +10,13 @@ function findHashtagsToReplace(text) {
 
   const expr = new RegExp(HASHTAG_REGEX);
   let match;
+
   while ((match = expr.exec(text)) != null) {
     const textMatch = match[0];
+    const hashtag = match[2];
     const start = match.index;
     const end = start + textMatch.length;
-    const replacement = `[${textMatch}](https://twitter.com/hashtag/${match[2]})`;
-    hashtags.push({ text: textMatch, start, end, replacement });
+    hashtags.push({ text: textMatch, hashtag, start, end });
   }
 
   return hashtags;
@@ -32,10 +33,9 @@ function replaceHashtags(text, hashtags) {
   });
 
   matches.forEach(match => {
-    finalText =
-      finalText.substring(0, match.start + offset) + match.replacement + finalText.substring(match.end + offset);
-
-    offset += match.replacement.length - match.text.length;
+    const replacement = `[${match.text}](https://twitter.com/hashtag/${match.hashtag})`;
+    finalText = finalText.substring(0, match.start + offset) + replacement + finalText.substring(match.end + offset);
+    offset += replacement.length - match.text.length;
   });
 
   return finalText;
