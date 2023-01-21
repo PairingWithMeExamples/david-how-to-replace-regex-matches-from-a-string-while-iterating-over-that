@@ -1,0 +1,22 @@
+{
+  "name": "2023-01-16-david-how-to-replace-regex-matches-from-a-string-while-iterating-over-that",
+  "version": "1.0.0",
+  "description": "How to replace regex matches from a string while iterating over that ___",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PairingWithMeExamples/2023-01-16-david-how-to-replace-regex-matches-from-a-string-while-iterating-over-that.git"
+  },
+  "author": "Pairing With Me",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/PairingWithMeExamples/2023-01-16-david-how-to-replace-regex-matches-from-a-string-while-iterating-over-that/issues"
+  },
+  "homepage": "https://github.com/PairingWithMeExamples/2023-01-16-david-how-to-replace-regex-matches-from-a-string-while-iterating-over-that#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
